@@ -275,3 +275,9 @@ blockquote {
   border: 8px outset white;
   background: radial-gradient(#fbfdfc, #fbd6f7);
 }
+
+.guidelines, #contribute ol, .profile, #styles {
+  font-size: calc(1.5em + 0.2vw);
+  line-height: 1.5;
+  letter-spacing: 0.025em;
+}
