@@ -51,21 +51,32 @@ body {
 
 body {
   height: 100%;
-  background: radial-gradient(#98bbff, #FCF8F8);
-  text-align: center;
+  background: radial-gradient(#99abfd, #fbfdfc);
 }
 
 html a {
-  color: #556efc;
+  color: #6a11e6;
 }
 
 .skip-link {
   display: none;
 }
 
+p {
+  color: black;
+  font-size: calc(1.5em + 0.2vw);
+  line-height: 1.5;
+  letter-spacing: 0.025em;
+}
+
 header {
+  text-align: center;
   padding: 10vh 0;
   color: white;
+  background: radial-gradient(#fbfdfc, #99abfd);
+  margin-bottom: 2em;
+  border-bottom: 8px solid white;
+
 }
 
 
@@ -74,7 +85,7 @@ header h1 {
   line-height: 1.5;
   text-shadow: 2.5px 2.5px 1px black;
   text-transform: uppercase;
-  font-size: 5.5em;
+  font-size: 8em;
   font-weight: 700;
   letter-spacing: 0.1em;
 }
@@ -82,9 +93,9 @@ header h1 {
 header h2 {
   font-family: "Handjet", 'Times New Roman', Times, serif;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 500;
   text-shadow: 2px 2px 1px black;
-  font-size: 2.25em;
+  font-size: 2.75em;
   max-width: 60%;
   text-wrap: wrap;
   justify-self: center;
@@ -92,24 +103,120 @@ header h2 {
 }
 
 header p {
+  font-size: 1.25em;
   font-family: Helvetica, sans-serif;
   font-style: italic;
   color: black;
 }
 
-header a {
-  color: #556efc;
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 3vh;
+}
+
+nav ul {
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0;
+  margin: 0;
+  font-family: "Handjet", "Times New Roman", serif;
 }
 
 
-.link-github, .link-twittercontact, .link-rss, .link-support {
-  display: inline-flex;
+nav a {
+  display: inline-block;
+  background: radial-gradient(#fbfdfc, #fbd6f7);
+  font-size: 1.75em;
+  text-decoration: none;
+  padding: 0.25em 0.5em;
+  border: 1px solid black;
+  border-width: 1px 3px 3px 1px;
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  background: radial-gradient(#fbfdfc, #d6a5c9);
+}
+
+
+
+#main, .profile, #styles, footer {
+  max-width: 100ch;
+  justify-self: center;
+  padding: 5vh;
+  font-family: "Handjet", "Times New Roman", serif;
+}
+
+#main h2, #main h3 {
+  text-align: center;
+  color: white;
+  line-height: 1.5;
+  text-shadow: 2.5px 2.5px 1px black;
+  text-transform: uppercase;
+  font-size: 3.5em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: normal;
+  margin-top: 0.5em;
+}
+
+
+
+#about ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.25em;
+}
+
+#about ul li {
+  text-align: center;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  font-size: 1.25em;
+  background: radial-gradient(#fbfdfc, #fbd6f7);
+  padding: 0.5em;
+  border: 4px outset white;
+  color: black;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  min-width: 0;
+  font-style: italic;
+}
+
+
+.page-footer ul {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 0.5em;
+}
+
+.link-github {
+  line-height: 1;
+  font-size: 1.25em;
   font-family: Helvetica, sans-serif;
   font-style: italic;
   gap: 0.5em;
-  margin: auto;
-  background: linear-gradient(#FCF8F8, #a5ff8b);
+  background: linear-gradient(#fbfdfc, #a5ff8b);
   text-decoration: none;
   padding: 0.25em 0.5em;
   border: 1px solid black;
@@ -125,98 +232,29 @@ header a {
   fill: currentColor;
 }
 
-.link-github:hover {
-  border-width: 1px 5px 5px 1px;
-  background: linear-gradient(#FCF8F8, #5bc33e);
-}
-
-footer ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  list-style: none;
-  gap: 1em;
-}
-
-
-
-nav {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  padding: 3vh;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  align-items: center;
-  gap: 1em;
-  padding: 0;
-  margin: 0;
-  font-family: "Handjet", "Times New Roman", serif;
-}
-
-
-nav a {
-  display: inline-block;
-  background: linear-gradient(#FCF8F8, #98bbff);
-  font-size: 1.3em;
+.page-footer .link-github, .link-twittercontact, .link-rss, .link-support {
+  gap: 0.5em;
+  font-size: 1.125em;
+  font-family: Helvetica, sans-serif;
+  font-style: italic;
+  background: linear-gradient(#fbfdfc, #a5ff8b);
   text-decoration: none;
   padding: 0.25em 0.5em;
   border: 1px solid black;
   border-width: 1px 3px 3px 1px;
-  border-radius: 10px;
+  border-radius: 25px;
   color: black;
   cursor: pointer;
 }
 
-nav a:hover {
-  text-decoration: underline;
-  background: linear-gradient(#FCF8F8,rgb(74, 116, 201));
+.link-github:hover, .link-twittercontact:hover, .link-rss:hover, .link-support:hover {
+  background: linear-gradient(#fbfdfc, #5bc33e);
 }
 
 
 
-#main, .profile, #styles, footer {
-  max-width: 100ch;
-  justify-self: center;
-  padding: 5vh;
-  font-family: "Handjet", "Times New Roman", serif;
-}
-
-#main h2 {
-  color: white;
-  line-height: 1.5;
-  text-shadow: 2.5px 2.5px 1px black;
-  text-transform: uppercase;
-  font-size: 3.5em;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  line-height: normal;
-}
-
-#main p {
-  color: black;
-  font-size: 1.75em;
-  letter-spacing: 0.025em;
-}
-
-
-#about ul {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1em;
-  list-style: none;
-  padding-left: 0;
-}
-
-#about ul li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.25em;
-  background: linear-gradient(#FCF8F8, #a5ff8b);
+#files a {    
+  background: linear-gradient(#fbfdfc, #a5ff8b);
   padding: 0.5em;
   border: 1px solid black;
   border-width: 1px 3px 3px 1px;
@@ -228,5 +266,12 @@ nav a:hover {
   min-width: 0;
   font-family: Helvetica, sans-serif;
   font-style: italic;
+  text-decoration: none;
 }
 
+
+blockquote {
+  padding: 0.25em 1em;
+  border: 8px outset white;
+  background: radial-gradient(#fbfdfc, #fbd6f7);
+}
