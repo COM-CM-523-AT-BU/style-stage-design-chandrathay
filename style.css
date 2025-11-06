@@ -2,6 +2,10 @@
  * [Modified] Modern CSS Reset
  * @link https://github.com/hankchizljaw/modern-css-reset
 */
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
+
 /* Box sizing rules */
 *,
 *::before,
@@ -43,4 +47,365 @@ body {
   }
 }
 
-// Begin theme styles
+/* Begin theme styles */
+
+body {
+  height: 100%;
+  background: radial-gradient(#99abfd, #fbfdfc);
+}
+
+html a {
+  color: #6a11e6;
+}
+
+.skip-link {
+  display: none;
+}
+
+p {
+  color: black;
+  font-size: calc(1.5em + 0.2vw);
+  line-height: 1.5;
+  letter-spacing: 0.025em;
+}
+
+header {
+  text-align: center;
+  padding: 10vh 0;
+  color: white;
+  background: radial-gradient(#fbfdfc5c, #99abfd);
+  margin-bottom: 2em;
+  border-bottom: 8px solid white;
+
+}
+
+
+header h1 {
+  font-family: "Handjet", 'Times New Roman', Times, serif;
+  line-height: 1.5;
+  text-shadow: 2.5px 2.5px 1px black;
+  text-transform: uppercase;
+  font-size: 8em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+header h2 {
+  font-family: "Handjet", 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-weight: 500;
+  text-shadow: 2px 2px 1px black;
+  font-size: 2.75em;
+  max-width: 60%;
+  text-wrap: wrap;
+  justify-self: center;
+  line-height: 1;
+}
+
+header p {
+  font-size: 1.25em;
+  font-family: Helvetica, sans-serif;
+  font-style: italic;
+  color: black;
+}
+
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 3vh;
+}
+
+nav ul {
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0;
+  margin: 0;
+  font-family: "Handjet", "Times New Roman", serif;
+}
+
+
+nav a {
+  display: inline-block;
+  background: radial-gradient(#fbfdfc, #fbd6f7);
+  font-size: 1.75em;
+  text-decoration: none;
+  padding: 0.25em 0.5em;
+  border: 1px solid black;
+  border-width: 1px 3px 3px 1px;
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  background: radial-gradient(#fbfdfc, #d6a5c9);
+}
+
+
+
+#main, .profile, #styles, aside, .page-footer, footer {
+  max-width: min(100ch, 90vw);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5vh;
+  font-family: "Handjet", "Times New Roman", serif;
+}
+
+#main h2, #main h3 {
+  text-align: center;
+  color: white;
+  line-height: 1.5;
+  text-shadow: 2.5px 2.5px 1px black;
+  text-transform: uppercase;
+  font-size: 3.5em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: normal;
+  margin-top: 0.75em;
+}
+
+
+
+#about ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.25em;
+}
+
+#about ul li {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25em;
+  background: radial-gradient(#fbfdfc, #fbd6f7);
+  padding: 0.5em;
+  border: 4px outset white;
+  color: black;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  min-width: 0;
+  font-style: italic;
+}
+
+.page-footer {
+  max-width: 100ch;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5vh;
+  padding-right: 5vh;
+}
+
+
+.page-footer ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 0.75em;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.link-guidelines {
+  line-height: 1;
+  font-size: 1.25em;
+  font-family: Helvetica, sans-serif;
+  font-style: italic;
+  gap: 0.5em;
+  background: linear-gradient(#fbfdfc, #a5ff8b);
+  text-decoration: none;
+  padding: 0.25em 0.5em;
+  border: 1px solid black;
+  border-width: 1px 3px 3px 1px;
+  border-radius: 25px;
+  color: black;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  margin: 1em auto;
+  width: fit-content;
+}
+
+.link-github svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+
+.link-github:hover, .link-twittercontact:hover, .link-rss:hover, .link-support:hover, .link-guidelines:hover {
+  background: linear-gradient(#fbfdfc, #5bc33e);
+}
+
+
+.link-github {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+  font-size: 1.125em;
+  font-family: Helvetica, sans-serif;
+  font-style: italic;
+  background: linear-gradient(#fbfdfc, #a5ff8b);
+  text-decoration: none;
+  padding: 0.25em 0.5em;
+  border: 1px solid black;
+  border-width: 1px 3px 3px 1px;
+  border-radius: 25px;
+  color: black;
+  cursor: pointer;
+}
+
+
+#files .container > a, .page-footer li a {   
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+  font-size: 1.125em;
+  font-family: Helvetica, sans-serif;
+  font-style: italic;
+  background: linear-gradient(#fbfdfc, #a5ff8b);
+  text-decoration: none;
+  padding: 0.25em 0.5em;
+  border: 1px solid black;
+  border-width: 1px 3px 3px 1px;
+  border-radius: 25px;
+  color: black;
+  cursor: pointer;
+}
+
+
+
+#files a:hover, .profile a:hover, #styles .container > a:hover, .page-footer > li a:hover {
+  background: linear-gradient(#fbfdfc, #5bc33e);
+}
+
+
+
+blockquote, ol, .profile, #styles {
+  padding: 0.5em 1em;
+  border: 8px outset white;
+  background: radial-gradient(#fbfdfc, #fbd6f7);
+}
+
+ol li {
+  margin: 0.5em 0.75em;
+}
+
+
+.guidelines, #contribute ol, .profile, #styles {
+  font-size: calc(1.5em + 0.2vw);
+  line-height: 1.5;
+  letter-spacing: 0.025em;
+}
+
+#guidelines h3 {
+  text-shadow: none;
+  color: black;
+  font-weight: 500;
+  display: inline-block;
+  justify-self: center;
+  background: linear-gradient(#fbfdfc, #fbd6f7);
+  transform: rotate(-6deg);
+  padding: 0.025em 0.25em;
+  border: 6px outset white;
+}
+
+.profile, #styles {
+  padding: 1em;
+  max-width: 55ch;
+  margin: 1em auto;
+}
+
+.profile h4, #styles h2 {
+  font-size: 1.25em;
+}
+
+.profile ul, .features {
+  gap: 1em;
+  list-style: none;
+  padding-left: 0;
+}
+
+.profile ul ~ a, #styles ul ~ a {
+  font-size: 0.75em;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  font-style: italic;
+  gap: 0.5em;
+  background: linear-gradient(#fbfdfc, #a5ff8b);
+  text-decoration: none;
+  padding: 0.25em;
+  border: 1px solid black;
+  border-width: 1px 3px 3px 1px;
+  border-radius: 25px;
+  color: black;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 0.5em;
+    width: 100%;
+    padding: 0;
+    font-size: 2vw;
+  }
+  nav li {
+    width: 100%;
+  }
+  nav a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  header {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #about ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #about ul {
+    grid-template-columns: 1fr;
+    font-size: 1em;
+  }
+  #main h2, #main h3 {
+    font-size: 2.5em;
+  }
+  .profile h4, #styles h2 {
+    font-size: 1.25em;
+  }
+  #main, .profile, #styles, aside, .page-footer, footer {
+    max-width: 75ch;
+  }
+  .profile, #styles {
+    max-width: 40ch;
+  }
+
+
