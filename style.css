@@ -212,11 +212,11 @@ nav a:hover {
 .page-footer ul {
   display: flex;
   align-items: center;
-  padding: 0;
-  margin: 0;
   flex-wrap: wrap;
   list-style: none;
-  gap: 0.5em;
+  gap: 0.75em;
+  padding: 0;
+  margin: 0 auto;
 }
 
 .link-guidelines {
@@ -332,7 +332,7 @@ ol li {
 }
 
 .profile h4, #styles h2 {
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 
 .profile ul, .features {
